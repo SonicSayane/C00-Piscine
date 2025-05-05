@@ -8,17 +8,12 @@
 echo -n "Entrez le nom du fichier : "
 read filename
 
-# Vérifier si une entrée a été fournie
-if [ -z "$filename" ]; then
-    echo "Erreur : Aucun nom de fichier fourni."
-    exit 1
-fi
 
 # Vérifier si le fichier existe
-if [ -f "$filename" ]; then
-    echo "Le fichier '$filename' existe."
-    exit 0
+if [ -z "$filename" ]; then
+    echo "Erreur : Aucun nom de fichier fourni"
+elif [ -f "$filename" ]; then
+    echo "Le fichier '$filename' existe"
 else
-    echo "Le fichier '$filename' n'existe pas."
-    exit 1
+    echo "Le fichier '$filename' n'existe pas"
 fi
