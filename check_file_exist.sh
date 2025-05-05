@@ -10,9 +10,7 @@ read filename
 
 
 # Vérifier si le fichier existe
-if [ -z "$filename" ]; then
-    echo "Erreur : Aucun nom de fichier fourni"
-elif [ -f "$filename" ]; then
+if [ -f "$filename" ]; then
     echo "Le fichier '$filename' existe"
 else
     echo "Le fichier '$filename' n'existe pas"
